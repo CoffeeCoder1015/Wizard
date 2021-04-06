@@ -19,3 +19,7 @@ function Next() {
     Lst[i].play();
     i++;
 }
+
+function Reset(){
+    i = 0;
+}
