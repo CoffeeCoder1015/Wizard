@@ -14,11 +14,14 @@ def indexJS():
 
 @server.route("/audio<id>.mp3")
 def retAudio(id):
-    print(id)
     try:
         return ttsBack.WordLst[int(id)]
     except:
         return "NO MORE AUDIO"
+
+@server.route("/amt",methods=['POST'])
+def getAmt():
+    return str(len(ttsBack.WordLst))
 
 if __name__ == "__main__":
     server.run(host="localhost", port=8080, debug=False)
