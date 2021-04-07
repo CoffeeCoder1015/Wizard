@@ -1,4 +1,3 @@
-from os import unlink
 from gtts import gTTS
 from io import BytesIO
 from concurrent.futures import ThreadPoolExecutor
